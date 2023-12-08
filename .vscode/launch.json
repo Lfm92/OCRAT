@@ -1,0 +1,22 @@
+
+// .vscode/launch.json
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Lancer le serveur",
+        "program": "${workspaceFolder}/index.js",
+        "runtimeArgs": ["-r", "esm"],
+        "outFiles": ["${workspaceFolder}/out/**/*.js"]
+      },
+      {
+        "type": "chrome",
+        "request": "launch",
+        "name": "Lancer Chrome en utilisant localhost",
+        "url": "http://localhost:3000",
+        "webRoot": "${workspaceFolder}/C:/Users/ryand/OneDrive/Documents/epita/OCRAT"
+      }
+    ]
+  }
