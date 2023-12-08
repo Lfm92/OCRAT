@@ -11,7 +11,7 @@ header {
 
 footer {
     text-align: center;
-
+    
 }
 
 section {
@@ -21,4 +21,16 @@ section {
 ul {
     list-style-type: none;
     padding: 0;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f0f0f0;
 }
