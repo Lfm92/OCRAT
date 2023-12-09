@@ -5,27 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>solver</title>
     <link rel="stylesheet" href="styles.css">
+    
+    <style>
+    
+    header {
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    
+
+main {
+    text-align: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+}
+
+.grid-item h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+}
+</style>
 </head>
 <body>
 
     <header>
         <h1>La cinquième étape</h1>
         <h2>Le resolver de sudoku</h2>
-        <img src="Photo/Interface.png" alt="texte alternatif" width=50% height=30%/>
+        <img src="Photo/Interface.png" alt="texte alternatif" width=20% height=20%/>
     </header>
 
-    <footer>
+    
     <section id="objective">
-        <h2>A remplir</h2>
-        <p>texte</p>
+        <h2>Le backtracking</h2>
+        <p>Cette méthode consiste à revenir légèrement en arrière sur des décisions prises afin de sortir d'un blocage. La méthode des essais et erreurs constitue un exemple simple de backtracking.</p>
+            
+        <p> notre cas, celui de la résolution du sudoku, la contrainte sera que la grille est valide avec le chiffre que l’on ajoute.
+            On va parcourir la matrice, donnée par la grille, lorsqu’on sera sur une case vide, on testera l’ensemble des chiffres de 1 à 9, le premier chiffre respectant la contrainte sera ajouté dans la case puis on testera si la grille reste valide si on continue avec cette valeur. 
+            <li>on arrive à la fin de la grille complétée alors on a trouvé la solution et on la renvoie.</li>
+            <li>c’est que la valeur a posé problème au bout d’une certaine itération.</li> 
+            
+        <p>ce dernier cas, alors l’algorithme remonte à l’information de cette valeur puis teste la prochaine valeur respectant la contrainte.</p>
+        <p> processus est répété jusqu’à que la bonne valeur soit trouvée.</p>
+    </section>
+
+    <section>
+        <div class="grid-item">
+
+            <img src="Photo/gridBefore.png" width=30% height=40%>
+        </div>
+<br>
+<br>
+        <div class="grid-item">
+            
+            <img src="Photo/gridAfter.png" width=30% height=40%>
+        </div>
+        <br>
+        <br>
+        <div class="grid-item">
+            
+            <img src="Photo/hexagridBefore.png" width=30% height=40%>
+        </div>
+        <br>
+        <br>
+        <div class="grid-item">
+            
+            <img src="Photo/hexagridAfter.png" width=30% height=40%>
+        </div>
+        <br>
+<br>
     </section>
     
-
-    <main>
+    <footer>
+    <header>
     <button onclick="history.back()">Revenir en arrière</button>
 
     <button onclick="window.location.href='affichage.html'">Dernière étape</button>
-    </main>
+    </header>
 
     <section id="Retour à l'accueil">
         <a href="index.html">Retour à l'accueil</a>
